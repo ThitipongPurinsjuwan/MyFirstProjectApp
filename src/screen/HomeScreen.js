@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import SearchBox from '../components/Searchbox/SearchBoxMain';
 import {SwiperFlat} from '../components/Swiper/SwiperComponent';
 import {FastMenu} from '../components/FastMenu';
 import {RandomMenu} from '../components/RandomMenu';
@@ -170,6 +171,7 @@ export class HomeScreen extends React.Component {
         style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <ScrollView>
           <View style={styles.SwiperFlatContailner}>
+            {/* <SearchBox /> */}
             <SwiperFlat item={swiperData} />
           </View>
           <FastMenu _navigation={this.props.navigation} />

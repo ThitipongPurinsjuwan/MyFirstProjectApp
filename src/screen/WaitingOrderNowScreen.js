@@ -9,11 +9,24 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export class WaitingOrderNowScreen extends React.Component {
+class WaitingOrderNowScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    setTimeout(() => {
+      this.props.navigation.navigate('MainNavigation');
+    }, 2000);
+  }
   render() {
-    return <View></View>;
+    return (
+      <View
+        style={{flex: 1, justifyContent: 'center', backgroundColor: 'white'}}>
+        <ActivityIndicator size={100} color="black" />
+      </View>
+    );
   }
 }
+export {WaitingOrderNowScreen};
